@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -103,9 +103,8 @@ elif page == "Summary & Feedback":
     if feedback:
         st.success("Thank you for your feedback!")
         st.write(feedback)
-=======
-import streamlit as st
-import pandas as pd
+
+
 
 st.set_page_config(page_title="Interactive Data Dashboard", layout="centered")
 
@@ -124,4 +123,10 @@ st.bar_chart(data.set_index("Name"))
 st.subheader("📌 Insights")
 st.write("• Student E has the highest marks.")
 st.write("• Overall performance is good.")
->>>>>>> 4c6100f141b7b0f6625a3cb1b1227da4ce86dea9
+
+# Feedback section
+feedback = st.text_area("✍️ Enter your feedback")
+
+if feedback:
+    st.success("Thank you for your feedback!")
+    st.write(feedback)
